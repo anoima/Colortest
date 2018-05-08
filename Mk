@@ -37,14 +37,11 @@ namespace ImageScanner
             Color cl = new Color(255,255,255);
             Color numcolor = new Color(255,255,255);
             Point Colorpos= GetColorPos(cl);
-
-            int i = 0;
             Do
             {
-            	if(i==30)
+            	if(GetColorAt(GetColorPos(cl))!=cl)
             	{
 				Colorpos= GetColorPos(cl);
-				i=0;
             	}	
             	if(!getnum(Colorpos,numcolor))
 			{
@@ -54,7 +51,6 @@ namespace ImageScanner
 			{
 				break;
 			}
-            	i++;
             }While (true);
             //sw.Stop();
  
