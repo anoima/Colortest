@@ -1,0 +1,143 @@
+using ImageScanner.Properties;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Diagnostics;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
+ 
+namespace ImageScanner
+{
+    public partial class Form1 : Form
+    {
+ 	[DllImport("user32.dll")]
+        static extern void mouse_event(int dwFlags, int dx, int dy, int dwData, int dwExtraInfo);
+        private const int MOUSEEVENTF_MOVE = 0x0001;
+        private const int MOUSEEVENTF_LEFTDOWN = 0x0002;
+        private const int MOUSEEVENTF_LEFTUP = 0x0004;
+        private const int MOUSEEVENTF_RIGHTDOWN = 0x0008;
+        private const int MOUSEEVENTF_RIGHTUP = 0x0010;
+        private const int MOUSEEVENTF_MIDDLEDOWN = 0x0020;
+        private const int MOUSEEVENTF_MIDDLEUP = 0x0040;
+        private const int MOUSEEVENTF_ABSOLUTE = 0x8000;
+        public Form1()
+        {
+            InitializeComponent();
+        }
+ 
+        private void btnScan_Click(object sender, EventArgs e)
+        {
+            //Stopwatch sw = new Stopwatch();
+            //sw.Start();
+
+            Color cl = new Color(255,255,255);
+            Color numcolor = new Color(255,255,255);
+            Point Colorpos= GetColorPos(cl);
+
+            int i = 0;
+            Do
+            {
+            	if(i==30)
+            	{
+				Colorpos= GetColorPos(cl);
+				i=0;
+            	}	
+            	if(!getnum(Colorpos,numcolor))
+			{
+				Clickloc(Colorpos);
+			}
+			else 
+			{
+				break;
+			}
+            	i++;
+            }While (true);
+            //sw.Stop();
+ 
+            //TimeSpan ts = sw.Elapsed;
+        }
+ 
+        private Point GetColorPos(Color color)
+        {
+
+            Bitmap screenCapture = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
+ 
+            Graphics g = Graphics.FromImage(screenCapture);
+ 
+            g.CopyFromScreen(Screen.PrimaryScreen.Bounds.X,
+                             Screen.PrimaryScreen.Bounds.Y,
+                             0, 0,
+                             screenCapture.Size,
+                             CopyPixelOperation.SourceCopy);
+
+ 		var c;
+            for (int x = 0; x < screenCapture.Width; x++)
+            {
+                for (int y = 0; y < screenCapture.Height; y++)
+                {
+				c = GetColorAt(x,y);
+				if(c.R == color.R && c.G == color.G && c.B == color.B)
+				{
+					return (Point)x,y;
+				}
+                }
+            }
+        }
+
+        public Color GetColorAt(Point location)
+        {
+            using (Graphics gdest = Graphics.FromImage(screenPixel))
+            {
+                using (Graphics gsrc = Graphics.FromHwnd(IntPtr.Zero))
+                {
+                    IntPtr hSrcDC = gsrc.GetHdc();
+                    IntPtr hDC = gdest.GetHdc();
+                    int retval = BitBlt(hDC, 0, 0, 1, 1, hSrcDC, location.X, location.Y, (int)CopyPixelOperation.SourceCopy);
+                    gdest.ReleaseHdc();
+                    gsrc.ReleaseHdc();
+                }
+            }
+
+            return screenPixel.GetPixel(0, 0);
+        }
+        public void Clickloc(Point location)
+        {
+        	System.Windows.Forms.Cursor.Position = (location.x-30,location.y+30) ;
+		LeftClick();
+        }
+        public bool getnum(Point location,Color color)
+        {
+		if(GetColorAt(location.x-30,location.y-80)==color)
+		{
+			if(GetColorAt(location.x-30,location.y-84)==color)
+			{
+				if(GetColorAt(location.x-30,location.y-84)==color)
+				{
+					return true;
+				}
+				else
+				{
+					return false;
+				}
+			}
+			else
+			{
+				return false;
+			}
+		}
+		else
+		{
+			return false;
+		}
+        }
+        public static void LeftClick()
+        {
+            mouse_event(MOUSEEVENTF_LEFTDOWN, System.Windows.Forms.Control.MousePosition.X, System.Windows.Forms.Control.MousePosition.Y, 0, 0);
+            mouse_event(MOUSEEVENTF_LEFTUP, System.Windows.Forms.Control.MousePosition.X, System.Windows.Forms.Control.MousePosition.Y, 0, 0);
+        }
+    }
+}
