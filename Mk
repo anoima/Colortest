@@ -47,8 +47,8 @@ namespace ImageScanner
 
         private void btnScan_Click(object sender, EventArgs e)
         {
-            //Stopwatch sw = new Stopwatch();
-            //sw.Start();
+            Stopwatch sw = new Stopwatch();
+            sw.Start();
             switcher=true;
             Color cl = new Color(255,255,255);
             Color numcolor = new Color(255,255,255);
@@ -65,14 +65,13 @@ namespace ImageScanner
 			}
 			else 
 			{
-				MessageBox.Show("Successfully.");
 				switcher=false;
 				//break;
 			}
-            }While (!switcher);
-            //sw.Stop();
- 
-            //TimeSpan ts = sw.Elapsed;
+            }While (switcher);
+            sw.Stop();
+            MessageBox.Show("Successfully.\n Time : {0}.",sw.Elapsed);
+
         }
 
         private Bitmap GetScreen()
