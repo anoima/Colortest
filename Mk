@@ -39,7 +39,7 @@ namespace ImageScanner
             Point Colorpos= GetColorPos(cl);
             Do
             {
-            	if(GetColorAt(GetColorPos(cl))!=cl)
+            	if(GetColorAt(Colorpos)!=cl)
             	{
 				Colorpos= GetColorPos(cl);
             	}	
@@ -56,10 +56,9 @@ namespace ImageScanner
  
             //TimeSpan ts = sw.Elapsed;
         }
- 
-        private Point GetColorPos(Color color)
+        private Bitmap GetScreen()
         {
-
+		
             Bitmap screenCapture = new Bitmap(Screen.PrimaryScreen.Bounds.Width, Screen.PrimaryScreen.Bounds.Height);
  
             Graphics g = Graphics.FromImage(screenCapture);
@@ -69,6 +68,13 @@ namespace ImageScanner
                              0, 0,
                              screenCapture.Size,
                              CopyPixelOperation.SourceCopy);
+		return screenCapture;
+
+        }
+        private Point GetColorPos(Color color)
+        {
+
+            Bitmap screenCapture = GetScreen();
 
  		var c;
             for (int x = 0; x < screenCapture.Width; x++)
