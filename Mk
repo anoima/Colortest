@@ -24,11 +24,27 @@ namespace ImageScanner
         private const int MOUSEEVENTF_MIDDLEDOWN = 0x0020;
         private const int MOUSEEVENTF_MIDDLEUP = 0x0040;
         private const int MOUSEEVENTF_ABSOLUTE = 0x8000;
+        private static bool switcher = true; 
         public Form1()
         {
             InitializeComponent();
         }
- 
+
+        void Form1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+			if (e.KeyChar == 112)
+			{
+				if(switcher)
+				{
+					switcher=false;
+				}
+				else
+				{
+					switcher=true;
+				}
+			}
+        }
+
         private void btnScan_Click(object sender, EventArgs e)
         {
             //Stopwatch sw = new Stopwatch();
@@ -49,13 +65,15 @@ namespace ImageScanner
 			}
 			else 
 			{
+				MessageBox.Show("Successfully.");
 				break;
 			}
-            }While (true);
+            }While (!switcher);
             //sw.Stop();
  
             //TimeSpan ts = sw.Elapsed;
         }
+
         private Bitmap GetScreen()
         {
 		
@@ -68,15 +86,13 @@ namespace ImageScanner
                              0, 0,
                              screenCapture.Size,
                              CopyPixelOperation.SourceCopy);
-		return screenCapture;
+            return screenCapture;
 
         }
         private Point GetColorPos(Color color)
         {
-
             Bitmap screenCapture = GetScreen();
-
- 		var c;
+            var c;
             for (int x = 0; x < screenCapture.Width; x++)
             {
                 for (int y = 0; y < screenCapture.Height; y++)
@@ -106,11 +122,13 @@ namespace ImageScanner
 
             return screenPixel.GetPixel(0, 0);
         }
+
         public void Clickloc(Point location)
         {
         	System.Windows.Forms.Cursor.Position = (location.x-30,location.y+30) ;
 		LeftClick();
         }
+
         public bool getnum(Point location,Color color)
         {
 		if(GetColorAt(location.x-30,location.y-80)==color)
@@ -136,6 +154,7 @@ namespace ImageScanner
 			return false;
 		}
         }
+
         public static void LeftClick()
         {
             mouse_event(MOUSEEVENTF_LEFTDOWN, System.Windows.Forms.Control.MousePosition.X, System.Windows.Forms.Control.MousePosition.Y, 0, 0);
