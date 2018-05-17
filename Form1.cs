@@ -38,8 +38,8 @@ namespace WindowsFormsApplication2
             Stopwatch sw = new Stopwatch();
             sw.Start();
             switcher=true;
-            Color cl = Color.FromArgb(31,255,201,14);
-            Color numcolor = Color.FromArgb(238, 237, 28, 36);
+            Color cl = Color.FromArgb(40,255,255,0);
+            Color numcolor = Color.FromArgb(140, 51, 153, 255);
             Bitmap screenCapture = GetScreen();
             Point Colorpos = GetColorPos(cl, screenCapture);
             Console.WriteLine(Colorpos);
@@ -55,6 +55,7 @@ namespace WindowsFormsApplication2
                 if (!getnum(Colorpos, numcolor, screenCapture))
                 {
                     Clickloc(Colorpos);
+                   // Task.Delay(300);
                 }
                 else
                 {
@@ -65,7 +66,7 @@ namespace WindowsFormsApplication2
             sw.Stop();
             TimeSpan time = sw.Elapsed;
             Console.WriteLine("Successfully.\n Time : {0}.", time.Seconds);
-            MessageBox.Show("Successfully.\nTime : " + time.Seconds+" second", "Successfull", MessageBoxButtons.OK);
+            MessageBox.Show("Successfully.\nTime : " + time.Seconds + " second", "Successfull", MessageBoxButtons.OK);
 
         }
 
@@ -94,7 +95,8 @@ namespace WindowsFormsApplication2
                     c = screenCapture.GetPixel(x, y);//GetColorAt(new Point(x, y), screenCapture);
 				if(c.R == color.R && c.G == color.G && c.B == color.B)
 				{
-                    return new Point(x, y);
+                    //Console.WriteLine(new Point(x, y));
+                   return new Point(x, y);
 				}
                 }
             }
@@ -103,18 +105,32 @@ namespace WindowsFormsApplication2
 
         public void Clickloc(Point location)
         {
-        System.Windows.Forms.Cursor.Position = new Point(location.X-55,location.Y+50) ;
+        System.Windows.Forms.Cursor.Position = new Point(location.X-55,location.Y+75) ;
         MouseClick();
         }
 
         public bool getnum(Point location, Color color,Bitmap screen)
          {
-             Color c1 = screen.GetPixel(location.X - 10, location.Y - 96);
-             Color c2 = screen.GetPixel(location.X - 89, location.Y - 76);
-             Color c3=screen.GetPixel(location.X - 89, location.Y - 76);
+             Color c1 = screen.GetPixel(location.X - 69, location.Y - 102);
+             Color c2 = screen.GetPixel(location.X - 79, location.Y - 102);
+             Color c3 = screen.GetPixel(location.X - 79, location.Y - 92);
              if (c1.R == color.R && c1.G == color.G && c1.B == color.B)
              {
-                 return true;
+                 if (c2.R == color.R && c2.G == color.G && c2.B == color.B)
+                 {
+                     if (c3.R == color.R && c3.G == color.G && c3.B == color.B)
+                     {
+                         return true;
+                     }
+                     else
+                     {
+                         return false;
+                     }
+                 }
+                 else
+                 {
+                     return false;
+                 }
              }
              else
              {
