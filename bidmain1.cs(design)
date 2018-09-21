@@ -1,0 +1,165 @@
+namespace WindowsFormsApplication5
+{
+    partial class Mainform
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            this.components = new System.ComponentModel.Container();
+            this.startbtn = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.stopbtn = new System.Windows.Forms.Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.itemnamebox = new System.Windows.Forms.TextBox();
+            this.namelabel = new System.Windows.Forms.Label();
+            this.itempic = new System.Windows.Forms.PictureBox();
+            this.button2 = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.itempic)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // startbtn
+            // 
+            this.startbtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.startbtn.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.startbtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.startbtn.Location = new System.Drawing.Point(150, 230);
+            this.startbtn.Name = "startbtn";
+            this.startbtn.Size = new System.Drawing.Size(200, 40);
+            this.startbtn.TabIndex = 0;
+            this.startbtn.Text = "Start";
+            this.startbtn.UseVisualStyleBackColor = false;
+            this.startbtn.Click += new System.EventHandler(this.startbtn_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(175, 276);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(150, 25);
+            this.button1.TabIndex = 1;
+            this.button1.Text = "Exit";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // stopbtn
+            // 
+            this.stopbtn.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.stopbtn.Font = new System.Drawing.Font("Modern No. 20", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.stopbtn.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.stopbtn.Location = new System.Drawing.Point(150, 230);
+            this.stopbtn.Name = "stopbtn";
+            this.stopbtn.Size = new System.Drawing.Size(200, 40);
+            this.stopbtn.TabIndex = 2;
+            this.stopbtn.Text = "Stop";
+            this.stopbtn.UseVisualStyleBackColor = false;
+            this.stopbtn.Click += new System.EventHandler(this.stopbtn_Click);
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // itemnamebox
+            // 
+            this.itemnamebox.Font = new System.Drawing.Font("Maiandra GD", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.itemnamebox.Location = new System.Drawing.Point(145, 41);
+            this.itemnamebox.Name = "itemnamebox";
+            this.itemnamebox.Size = new System.Drawing.Size(210, 30);
+            this.itemnamebox.TabIndex = 3;
+            // 
+            // namelabel
+            // 
+            this.namelabel.AutoSize = true;
+            this.namelabel.Font = new System.Drawing.Font("Maiandra GD", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.namelabel.Location = new System.Drawing.Point(211, 6);
+            this.namelabel.Name = "namelabel";
+            this.namelabel.Size = new System.Drawing.Size(68, 32);
+            this.namelabel.TabIndex = 4;
+            this.namelabel.Text = "Item";
+            // 
+            // itempic
+            // 
+            this.itempic.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.itempic.Location = new System.Drawing.Point(160, 79);
+            this.itempic.Name = "itempic";
+            this.itempic.Size = new System.Drawing.Size(180, 110);
+            this.itempic.TabIndex = 6;
+            this.itempic.TabStop = false;
+            this.itempic.Click += new System.EventHandler(this.itempic_Click);
+            this.itempic.DoubleClick += new System.EventHandler(this.itempic_DoubleClick);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Font = new System.Drawing.Font("Modern No. 20", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.Location = new System.Drawing.Point(197, 200);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(105, 24);
+            this.button2.TabIndex = 9;
+            this.button2.Text = "Options";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
+            // Mainform
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(480, 307);
+            this.ControlBox = false;
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.itempic);
+            this.Controls.Add(this.namelabel);
+            this.Controls.Add(this.itemnamebox);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.startbtn);
+            this.Controls.Add(this.stopbtn);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "Mainform";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Love";
+            this.Load += new System.EventHandler(this.Form1_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.itempic)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button startbtn;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button stopbtn;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.TextBox itemnamebox;
+        private System.Windows.Forms.Label namelabel;
+        private System.Windows.Forms.PictureBox itempic;
+        private System.Windows.Forms.Button button2;
+    }
+}
+
