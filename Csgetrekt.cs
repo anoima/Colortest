@@ -32,7 +32,6 @@ namespace WindowsFormsApplication7
             string s;
             string[] val = new string[] {""};
             bool lcb = false;
-            bool linecont = true;
             for (int x = 1; x < 50000; x++)
             {
                 string urlDemo = "https://bddatabase.net/us/item/"+x+"/";
@@ -47,14 +46,13 @@ namespace WindowsFormsApplication7
                 string kk = "meta name=\"description\"";
                 //string m = reader.ReadToEnd();
                 //File.AppendAllText(@"U:\id.txt", m);
-                for (int i = 0; i < 700; i++)
+                for (int i = 0; i < 800; i++)
                 {
                     line = reader.ReadLine();
                     if (i<=10)
                     {
                         if (line.Contains(kk))
                         {
-                            linecont = true;
                             string toBeSearched = "Id: ";
                             int ix = line.IndexOf(toBeSearched);
 
@@ -66,18 +64,13 @@ namespace WindowsFormsApplication7
                                
                             }
                         }
-                        else
-                        {
-                            linecont = false;
-                        }
                     }
-                    if ((i >= 500 && i <= 700) && linecont)
+                    if (i >= 500 && i <= 800)
                     {
-                        if (line.Contains(" Bound when"))
-                        {
-                            lcb = true;
-                        }
-
+                            if (line.Contains("Bound"))
+                            {
+                                lcb = true;
+                            }
                     }
                   
 
