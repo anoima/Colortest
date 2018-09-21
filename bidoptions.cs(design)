@@ -1,0 +1,268 @@
+namespace WindowsFormsApplication5
+{
+    partial class Optionsform
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            this.button1 = new System.Windows.Forms.Button();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.waitnotlbl = new System.Windows.Forms.Label();
+            this.notwaitmin = new System.Windows.Forms.ComboBox();
+            this.notwaitmax = new System.Windows.Forms.ComboBox();
+            this.setmarketlbl = new System.Windows.Forms.Label();
+            this.setmarketbtn = new System.Windows.Forms.Button();
+            this.setnotlbl = new System.Windows.Forms.Label();
+            this.setnotificationbtn = new System.Windows.Forms.Button();
+            this.closebtn = new System.Windows.Forms.Button();
+            this.savebtn = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(0, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 0;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.CausesValidation = false;
+            this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.Column1,
+            this.Column2});
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(0, 5, 0, 0);
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle4;
+            this.dataGridView1.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.dataGridView1.Enabled = false;
+            this.dataGridView1.Location = new System.Drawing.Point(220, 0);
+            this.dataGridView1.MultiSelect = false;
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            this.dataGridView1.ScrollBars = System.Windows.Forms.ScrollBars.None;
+            this.dataGridView1.ShowCellToolTips = false;
+            this.dataGridView1.Size = new System.Drawing.Size(260, 325);
+            this.dataGridView1.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column1.DefaultCellStyle = dataGridViewCellStyle2;
+            this.Column1.HeaderText = "Column1";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column1.Width = 170;
+            // 
+            // Column2
+            // 
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Column2.DefaultCellStyle = dataGridViewCellStyle3;
+            this.Column2.HeaderText = "Column2";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            this.Column2.Resizable = System.Windows.Forms.DataGridViewTriState.False;
+            this.Column2.Width = 90;
+            // 
+            // waitnotlbl
+            // 
+            this.waitnotlbl.AutoSize = true;
+            this.waitnotlbl.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.waitnotlbl.Location = new System.Drawing.Point(45, 9);
+            this.waitnotlbl.Name = "waitnotlbl";
+            this.waitnotlbl.Size = new System.Drawing.Size(129, 15);
+            this.waitnotlbl.TabIndex = 1;
+            this.waitnotlbl.Text = "Wait after notification";
+            // 
+            // notwaitmin
+            // 
+            this.notwaitmin.FormattingEnabled = true;
+            this.notwaitmin.Location = new System.Drawing.Point(24, 38);
+            this.notwaitmin.Name = "notwaitmin";
+            this.notwaitmin.Size = new System.Drawing.Size(68, 21);
+            this.notwaitmin.TabIndex = 2;
+            // 
+            // notwaitmax
+            // 
+            this.notwaitmax.FormattingEnabled = true;
+            this.notwaitmax.Location = new System.Drawing.Point(119, 38);
+            this.notwaitmax.Name = "notwaitmax";
+            this.notwaitmax.Size = new System.Drawing.Size(68, 21);
+            this.notwaitmax.TabIndex = 3;
+            this.notwaitmax.SelectedIndexChanged += new System.EventHandler(this.notwaitmax_SelectedIndexChanged);
+            // 
+            // setmarketlbl
+            // 
+            this.setmarketlbl.AutoSize = true;
+            this.setmarketlbl.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setmarketlbl.Location = new System.Drawing.Point(27, 74);
+            this.setmarketlbl.Name = "setmarketlbl";
+            this.setmarketlbl.Size = new System.Drawing.Size(65, 15);
+            this.setmarketlbl.TabIndex = 4;
+            this.setmarketlbl.Text = "Set Market";
+            // 
+            // setmarketbtn
+            // 
+            this.setmarketbtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.setmarketbtn.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setmarketbtn.Location = new System.Drawing.Point(12, 92);
+            this.setmarketbtn.Name = "setmarketbtn";
+            this.setmarketbtn.Size = new System.Drawing.Size(92, 26);
+            this.setmarketbtn.TabIndex = 5;
+            this.setmarketbtn.Text = "Market";
+            this.setmarketbtn.UseVisualStyleBackColor = false;
+            this.setmarketbtn.Click += new System.EventHandler(this.setmarketbtn_Click);
+            // 
+            // setnotlbl
+            // 
+            this.setnotlbl.AutoSize = true;
+            this.setnotlbl.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setnotlbl.Location = new System.Drawing.Point(116, 74);
+            this.setnotlbl.Name = "setnotlbl";
+            this.setnotlbl.Size = new System.Drawing.Size(91, 15);
+            this.setnotlbl.TabIndex = 6;
+            this.setnotlbl.Text = "Set Notification";
+            // 
+            // setnotificationbtn
+            // 
+            this.setnotificationbtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.setnotificationbtn.Font = new System.Drawing.Font("Modern No. 20", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.setnotificationbtn.Location = new System.Drawing.Point(115, 92);
+            this.setnotificationbtn.Name = "setnotificationbtn";
+            this.setnotificationbtn.Size = new System.Drawing.Size(92, 26);
+            this.setnotificationbtn.TabIndex = 7;
+            this.setnotificationbtn.Text = "Notification";
+            this.setnotificationbtn.UseVisualStyleBackColor = false;
+            this.setnotificationbtn.Click += new System.EventHandler(this.setnotificationbtn_Click);
+            // 
+            // closebtn
+            // 
+            this.closebtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.closebtn.Font = new System.Drawing.Font("Modern No. 20", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.closebtn.Location = new System.Drawing.Point(48, 282);
+            this.closebtn.Name = "closebtn";
+            this.closebtn.Size = new System.Drawing.Size(110, 28);
+            this.closebtn.TabIndex = 8;
+            this.closebtn.Text = "Close";
+            this.closebtn.UseVisualStyleBackColor = false;
+            this.closebtn.Click += new System.EventHandler(this.closebtn_Click);
+            // 
+            // savebtn
+            // 
+            this.savebtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.savebtn.Font = new System.Drawing.Font("Modern No. 20", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.savebtn.Location = new System.Drawing.Point(65, 254);
+            this.savebtn.Name = "savebtn";
+            this.savebtn.Size = new System.Drawing.Size(78, 22);
+            this.savebtn.TabIndex = 9;
+            this.savebtn.Text = "Save";
+            this.savebtn.UseVisualStyleBackColor = false;
+            this.savebtn.Click += new System.EventHandler(this.savebtn_Click);
+            // 
+            // Optionsform
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(255)))), ((int)(((byte)(192)))));
+            this.ClientSize = new System.Drawing.Size(468, 311);
+            this.ControlBox = false;
+            this.Controls.Add(this.savebtn);
+            this.Controls.Add(this.closebtn);
+            this.Controls.Add(this.setnotificationbtn);
+            this.Controls.Add(this.setnotlbl);
+            this.Controls.Add(this.setmarketbtn);
+            this.Controls.Add(this.setmarketlbl);
+            this.Controls.Add(this.notwaitmax);
+            this.Controls.Add(this.notwaitmin);
+            this.Controls.Add(this.waitnotlbl);
+            this.Controls.Add(this.dataGridView1);
+            this.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
+            this.Name = "Optionsform";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
+            this.Text = "Options";
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Label waitnotlbl;
+        private System.Windows.Forms.ComboBox notwaitmin;
+        private System.Windows.Forms.ComboBox notwaitmax;
+        private System.Windows.Forms.Label setmarketlbl;
+        private System.Windows.Forms.Button setmarketbtn;
+        private System.Windows.Forms.Label setnotlbl;
+        private System.Windows.Forms.Button setnotificationbtn;
+        private System.Windows.Forms.Button closebtn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.Button savebtn;
+    }
+}
